@@ -42,3 +42,8 @@ end_factorial:
   popl %ebp                         # they were before the function started
 ret                                 # return to the function (this pops the return value, too)
 
+To run, from the command line (I'm using an x86-64 build so you may need to assemble differently)
+#  		    	as --32 factorial.s -o factorial.o
+#			ld -melf_i386 factorial.o -o factorial
+#			./power
+#			echo $?
